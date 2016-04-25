@@ -13,7 +13,7 @@ var app = angular.module('Example', ['ngMaterial', 'ngRoute', 'noteService']);
 
 //*** Setup application controllers.
 app.controller('ListCtrl',
-    ['$q', '$scope', '$location', 'noteService', Example.ListController]);
+    ['$q', '$scope', '$location', '$mdToast', 'noteService', Example.ListController]);
 app.controller('DetailCtrl',
     ['$location', '$routeParams', 'noteService', Example.DetailController]);
 

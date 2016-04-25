@@ -64,7 +64,8 @@ Example.NoteService.prototype.updateNote = function(note) {
 };
 
 Example.NoteService.prototype.createEmptyNote = function() {
-  this.createNote(Example.constants.DEFAULT_NOTE_TITLE + this._nextId + 1,
+  var previewNextId = this._nextId + 1;
+  this.createNote(Example.constants.DEFAULT_NOTE_TITLE + previewNextId,
       Example.constants.DEFAULT_NOTE_CONTENT);
 };
 
