@@ -1,0 +1,29 @@
+<div class="ex-wrapper">
+  <div class="ex-content">
+    <!-- Controls for TODO list -->
+    <div>
+      <md-button class="md-fab md-primary md-hue-2" aria-label="New">
+          <md-icon>add</md-icon>
+      </md-button>
+    </div>
+    <div ng-repeat="item in ctrl.notes">
+      <md-card md-theme="{{'default'}}">
+        <md-card-title layout="row" layout-align="start center">
+          <span class="md-headline" flex="90">{{ item.title }}</span>
+          
+        </md-card-title>
+        <md-card-content>
+          {{ item.content }}
+        </md-card-content>
+        <md-card-actions layout="row" layout-align="end center">
+          <md-button class="md-icon-button" aria-label="Delete" ng-click="ctrl.deleteNote(item.id)">
+            <md-icon class="material-icons">delete</md-icon>
+          </md-button>
+          <md-button class="md-icon-button" aria-label="Share" ng-click="ctrl.showNote(item.id)">
+            <md-icon class="material-icons">arrow_forward</md-icon>
+          </md-button>
+        </md-card-actions>
+      </md-card>
+    </div>
+  </div>
+</div>

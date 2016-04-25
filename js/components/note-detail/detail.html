@@ -1,0 +1,26 @@
+<div class="ex-wrapper">
+  <div class="ex-content">
+    <md-card md-theme="default">
+      <md-card-actions layout="row" layout-align="start center">
+        <md-button class="md-icon-button" aria-label="Share">
+          <md-icon class="material-icons" ng-click="ctrl.listNotes()">arrow_back</md-icon>
+        </md-button>
+      </md-card-actions>
+      <md-card-title>
+        <span class="md-headline">{{ ctrl.note.title }}</span>     
+      </md-card-title>
+      <md-card-content class="ex-note-content" ng-show="!ctrl.editMode" ng-click="ctrl.toggleEdit()">
+        {{ ctrl.note.content }}
+      </md-card-content>
+      <md-card-content ng-show="ctrl.editMode">
+        <md-input-container class="md-block">
+          <label>Note Text</label>
+          <textarea ng-model="ctrl.note.content" md-maxlength="500" rows="5" md-select-on-focus=""></textarea>
+        </md-input-container>
+        <md-card-actions layout="row" layout-align="start center">
+          <md-button class="md-primary" ng-click="ctrl.saveEdit()">Save</md-button>
+        </md-card-actions>
+      </md-card-content>
+    </md-card>
+  </div>
+</div>

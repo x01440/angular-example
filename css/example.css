@@ -1,0 +1,25 @@
+.ex-header {
+  margin: auto;
+  text-align: center;
+  width: 60%;
+}
+
+.ex-content {
+  margin: auto;
+  width: 60%;
+}
+
+.ex-wrapper {
+  
+}
+
+.ex-note-content {
+  margin: 16px;
+  padding: 8px;
+}
+
+.ex-note-content:hover {
+  background-color: #ddd;
+  cursor: pointer;
+  
+}
