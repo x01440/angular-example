@@ -32,6 +32,7 @@ Example.ListController.prototype.deleteNote = function(id) {
 };
 
 Example.ListController.prototype.addNote = function() {
-  mdToast.show(mdToast.simple().textContent("Creating new note"));
+  var mdToast = this._ij.mdToast;
+  mdToast.show(mdToast.simple().textContent("Created new note"));
   this._ij.noteService.createEmptyNote();
 };
